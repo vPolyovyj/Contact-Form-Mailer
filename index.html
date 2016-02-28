@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+ 								        
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+	<!-- Section: contact -->
+    <section id="contact" class="home-section text-center bg-gray">
+		<div class="heading-contact">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="section-heading">
+						<h2>Keep in touch</h2>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-5">
+				<hr class="marginbot-50">
+			</div>
+		</div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="boxed-gray">
+                <form id="contact-form" role="form" data-toggle="validator">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Your name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Email" required="required" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="Доставка бутильованої води">Delivery</option>
+                                <option value="Гуртовий продаж">Services</option>
+                                <option value="Відгуки">Response</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Message text"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-lg btn-success pull-right" id="btnContactUs">Send</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+		
+		<div class="col-lg-4">
+			<div class="widget-contact">
+				<h5>Contact info</h5>				
+				<address>
+				  <strong>Company Name</strong><br>
+				  <abbr title="Phone">Phone:</abbr>+380XXXXXXXXX
+				</address>
+				<address>
+				  <strong>Email</strong><br>
+				  <a href="mailto:#">company@gmail.com</a>
+				</address>	
+				<address>
+				  <strong>Social:</strong>
+				</address>					
+			
+			</div>	
+		</div>
+    </div>	
+
+		</div>
+	</section>
+	<!-- /Section: contact -->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-lg-12">
+					<div class="wow shake" data-wow-delay="0.4s">
+						<div class="page-scroll marginbot-30">
+						</div>
+					</div>
+					<p>©Copyright 2016 - CBTO.</p>
+				</div>
+			</div>	
+		</div>
+	</footer>
+
+    <!-- Core JavaScript Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Custom Theme SendEmailJs -->
+	<script src="js/send_mail/validator.js"></script>
+	<script src="js/send_mail/send_mail.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var opts = {
+		fields: {
+			email_required_data: {
+				subject:{id: 'subject', cyrname: 'Тема'},
+				message:{id: 'message', cyrname: 'Повідомлення'}
+			},
+			email_data: {
+				email:{id: 'email', cyrname: 'Електронна пошта'},
+				name:{id: 'name', cyrname: 'Ім\'я'}
+			}
+		},
+		url: 'mail/send.php' // path to script
+		};
+
+		var SendMailObject = sendEmail(opts);
+		$("#contact-form").validator().on("submit", function (event) {
+			if (event.isDefaultPrevented()) {
+
+			} else {
+				event.preventDefault();
+				SendMailObject.Submit(this);
+			}
+		});
+	});
+	</script>
+
+</body>
+
+</html>
