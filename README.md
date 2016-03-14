@@ -5,7 +5,7 @@ Mailer for contact from which uses sessions to control number of letters per tim
 
 # Short description
 
-This is simple PHP+Ajax mailer for contact form. The main advantage of this mailer that it uses sessions to prevent sending of many letters per time from one IP. It's simple and in the same time quite efficient solution. Also it's very simple for usage.
+This is simple PHP+AJAX mailer for contact form. The main advantage of this mailer that it uses sessions to prevent sending of many letters per time from one IP. It's simple and in the same time quite efficient solution. Also it's very simple for usage.
 Bootstrap css framework for view is used.
 
 ***
