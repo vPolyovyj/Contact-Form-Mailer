@@ -39,3 +39,4 @@ Mailer for contact from which uses sessions to control number of letters per tim
 		});
 	});
 ```
+* do not forget to change parameter `url: 'mail/send.php'` to correct path on your website
