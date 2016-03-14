@@ -10,18 +10,18 @@
 	$lockingDurationInHours = 2; // duration of locking
 
 	$charset        = 'UTF-8'; // set email charset
-	$recipientEmail = 'vtx@lambo-project.com';//'o.budenkevych@gmail.com';
-	$senderEmail    = 'mailer@lambo-project.com';
-	$senderName     = 'Галицьке Джерело';
+	$recipientEmail = 'recipient@example.com';
+	$senderEmail    = 'sender@example.com';
+	$senderName     = 'Sender';
 
-	$useSMTP = false; // allow/disallow mail sending with smtp
+	$useSMTP = false; // allow/disallow mail sending with SMTP
 	if ($useSMTP)
 	{
-		$host           = 'smtp.gmail.com';              // SMTP host 'smtp1.example.com;smtp2.example.com';
-		$username       = 'support@byte.lv.tcworld.net'; // SMTP username 'user@example.com';
-		$password       = 'Gfhjkm<fqnsdcmrjujCfggjhnf';  // SMTP password 'secret';
-		$secureProtocol = 'tls';                         // TLS or SLL encryption
-		$port           = 587;                           // TCP Port
+		$host           = 'smtp1.example.com;smtp2.example.com'; // SMTP host
+		$username       = 'user@example.com';                    // SMTP username
+		$password       = 'secret';                              // SMTP password
+		$secureProtocol = 'tls';                                 // TLS or SLL encryption
+		$port           = 587;                                   // TCP Port
 	}
     
 	if ($_POST['form_data'])
