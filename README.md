@@ -10,8 +10,8 @@ Mailer for contact from which uses sessions to control number of letters per tim
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- Custom Theme SendEmailJs -->
-	  <script src="js/send_mail/validator.js"></script>
-	  <script src="js/send_mail/send_mail.js"></script>
+    <script src="js/send_mail/validator.js"></script>
+    <script src="js/send_mail/send_mail.js"></script>
 ```
 * after including of js files put the following code in <script> tag
 ```javascript
@@ -38,4 +38,4 @@ Mailer for contact from which uses sessions to control number of letters per tim
 			}
 		});
 	});
-	```
+```
