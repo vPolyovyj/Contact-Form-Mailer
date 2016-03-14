@@ -14,7 +14,7 @@
 	$senderEmail    = 'mailer@lambo-project.com';
 	$senderName     = 'Галицьке Джерело';
 
-	$useSMTP = false; // variable that allow mail sending with smtp
+	$useSMTP = false; // allow/disallow mail sending with smtp
 	if ($useSMTP)
 	{
 		$host           = 'smtp.gmail.com';              // SMTP host 'smtp1.example.com;smtp2.example.com';
